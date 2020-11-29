@@ -10,6 +10,8 @@ class CornocScrapyItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
 
+    #进港/出港
+    type = scrapy.Field()
     #航空公司图片
     img = scrapy.Field()
     #航空公司地址
