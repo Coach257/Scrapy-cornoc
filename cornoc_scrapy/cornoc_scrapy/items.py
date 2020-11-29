@@ -5,7 +5,7 @@
 
 import scrapy
 
-
+#len(dict) = 9
 class CornocScrapyItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
@@ -28,8 +28,3 @@ class CornocScrapyItem(scrapy.Item):
     actual = scrapy.Field()
     #状态
     state = scrapy.Field()
-
-    #现在时间(爬取时间)
-    nowtime = scrapy.Field()
-    
-    #pass

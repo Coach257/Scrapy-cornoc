@@ -10,9 +10,9 @@ class MySpider(scrapy.Spider):
     start_urls = ['http://data.carnoc.com/corp/airport/csx__airportflight.html']
     #爬取方法
     def parse(self, response):
-        #实例一个容器保存爬取的信息
+        #爬取进港数据
         arrivaldata = CornocScrapyItem()
-        #进港数据
+        yield(arrivaldata)
         for li in response.xpath("//div[@id='icefable1']/li"):
             arrivaldata['type'] = "进港"
             arrivaldata['img'] = li.xpath(".//span[1]/a/img/@src").extract()[0]
@@ -24,7 +24,7 @@ class MySpider(scrapy.Spider):
             arrivaldata['actual'] = li.xpath(".//span[5]/text()").extract()[0]
             arrivaldata['state'] = li.xpath(".//span[6]/text()").extract()[0]
             yield(arrivaldata)
-
+        #爬取出港数据
         departuredata = CornocScrapyItem()
         for li in response.xpath("//div[@id='icefable2']/li"):
             departuredata['type'] = "出港"
