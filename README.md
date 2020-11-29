@@ -1,5 +1,14 @@
 # Scrapy-cornoc
-> 爬取网址：http://data.carnoc.com/corp/airport/csx__airportflight.html
+> 爬取网址：http://data.carnoc.com/corp/airport/csx__airportflight.html \
+> 每过24小时爬取一次
+
+## USAGE
+```
+python main.py
+```
+cornoc_scrapy将会爬取网站上的最新内容更新项目目录下的data.json文件
+
+## 目录结构
 
 scrapy.cfg: 项目的配置文件
 scrapytest/: 该项目的python模块。之后您将在此加入代码。

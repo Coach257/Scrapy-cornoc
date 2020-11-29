@@ -5,7 +5,7 @@ def run():
     while True:
         print("running\n")
         os.system("scrapy crawl MySpider")
-        time.sleep(60)
+        time.sleep(86400)
 
 if __name__ == '__main__':
     run()
