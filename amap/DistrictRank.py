@@ -45,4 +45,4 @@ for tr in tabledata:
 with open(filename,"w", encoding="utf-8") as f:
     f.write(json.dumps(jsondata,ensure_ascii=False))
 
-driver.close()
+driver.quit()
