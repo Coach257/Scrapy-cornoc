@@ -13,7 +13,7 @@ post_url = "https://report.amap.com/ajax/roadRank.do?roadType=0&timeType=0&cityC
 ti = datetime.datetime.now().strftime('%Y-%m-%d')
 
 # 存储的文件名
-filename = '['+ti+']''深圳道路实时信息'+'.json'
+filename = '['+ti+']''深圳道路拥堵信息'+'.json'
 
 # 接受reponse,内容为json格式的字符串
 reponsetxt = se.get(post_url).text.replace("'",'"').replace('/ ','/')
